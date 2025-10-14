@@ -13,3 +13,4 @@ while True:
     n += 1
     term *= 0.5
     
+
