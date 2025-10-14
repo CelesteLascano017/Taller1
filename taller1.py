@@ -2,13 +2,18 @@ import math
 
 vector: List[int] = [2,1,5,9,3,2]
  
-def serie_errorabs: 
-    v_real = 2
-    n = 0
-    S = 0
-    while True:
-        i = 1 / (2**n)
-        S += i    
+ 
+v_real = 2
+n = 0
+S = 0
+while True:
+    i = 1 / (2**n)
+    n += 1
+    print(f"Termino {n}: {i}, Suma parcial: {S}")
+    error_abs = abs(v_real - S)
+    if error_abs < 10**-1:
+        break
+    print(f"Suma: {S}, Número de términos{n}, Error absoluto: {error_abs}")
 
 def bubblesort(vector):
     tamano = len(vector)
